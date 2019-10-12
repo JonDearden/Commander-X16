@@ -1,6 +1,8 @@
 ; ===========================================================================================
-; VERA includes - Jon Dearden
+; VERA Includes - Jon Dearden
 ; Version 1.0 - October 2019
+;
+; Adapted from https://github.com/commanderx16/x16-demo/blob/master/assembly/vera.inc
 ; See https://github.com/commanderx16/x16-docs/blob/master/VERA%20Programmer's%20Reference.md
 ; ===========================================================================================
 
