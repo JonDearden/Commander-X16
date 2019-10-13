@@ -43,7 +43,7 @@ bitLoop:  lda ($2),y
           ; Load palette - Offset stored in zero page $2, $3
           ; Set 20-bit VERA_ADDR to start of the palette - preserve Increment register
           +vSet VREG_PALETTE | ADDR_INC_1
-          ldx #2 ; 2 x 256 = 512 pairs of color bytes
+          ldx #2 ; 2 x 256 = 512 bytes (2 bytes to a color)
           ldy #0
           lda #<palette
           sta $2
@@ -57,7 +57,7 @@ palLoop:  lda ($2),y
           inc $3
           dex
           bne palLoop
-
+          
           ; Layer 0 - set 8 bpp (256 color) bitmap mode
           ; Set 20-bit VERA_ADDR to start of Layer 0 Ctrl 0 register - preserve Increment register
           +vSet VREG_LAYER_0_CTRL0 | ADDR_INC_1

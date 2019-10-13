@@ -223,10 +223,10 @@ VREG_UART_BAUDDIV_H = VREG_UART + 3;
 
 ; Write A to 20-bit VERA internal address
 !macro vWrite .addr {
-  pha
+  pha ;
   +vSet .addr
-  pla
-  sta VERA_DATA_0
+  pla ;
+  sta VERA_DATA_0 ;
 }
 
 ; Read value at 20-bit VERA internal address to A
