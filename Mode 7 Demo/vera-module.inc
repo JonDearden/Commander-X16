@@ -8,6 +8,7 @@
 
 ; ---------------------------
 ; External address space
+; (visible to the CPU)
 ; ---------------------------
                                 
 VERA_BASE     = $9f20
@@ -40,7 +41,7 @@ ADDR_INC_16384 = $1500000
 
 
 ; ---------------------------
-; Internal address space
+; VERA Internal address space
 ; ---------------------------
 
 VREG_VIDEO_RAM    = $00000
