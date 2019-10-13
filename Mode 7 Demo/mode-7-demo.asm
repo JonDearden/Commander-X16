@@ -25,7 +25,7 @@
           ; Load bitmap - Offset stored in zero page $2, $3
           ; Set 20-bit VERA_ADDR to start of video RAM - preserve Increment register
           +vSet VREG_VIDEO_RAM | ADDR_INC_1
-          ldx #136 ; 34,816 bytes = 136 x 256
+          ldx #136 ; 136 x 256 = 34,816 bytes
           ldy #0
           lda #<bitmap
           sta $2
@@ -43,7 +43,7 @@ bitLoop:  lda ($2),y
           ; Load palette - Offset stored in zero page $2, $3
           ; Set 20-bit VERA_ADDR to start of the palette - preserve Increment register
           +vSet VREG_PALETTE | ADDR_INC_1
-          ldx #2
+          ldx #2 ; 2 x 256 = 512 pairs of color bytes
           ldy #0
           lda #<palette
           sta $2
